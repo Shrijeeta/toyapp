@@ -24,19 +24,21 @@
  # <<: *default
   #database: db/production.sqlite3
 
-  default: &default
-  adapter: postgresql
-  username: postgres
-  password: pooja013
-  pool: 5
-  timeout: 5000
+  #default: &default
+  #adapter: sqlite3
+  #pool: 5
+  #timeout: 5000
 
 development:
   #<<: *default
-  database: toyapp
   adapter: postgresql
+  encoding: unicode
+  database: toyapp
+  pool: 5
   username: postgres
-  password: pooja013
+  password: pooja013 
+
+  
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -44,12 +46,18 @@ development:
 test:
   #<<: *default
   adapter: postgresql
+  encoding: unicode
   database: toyapp
+  pool: 5
   username: postgres
-  password: pooja013
+  password: pooja013 
+
 production:
   #<<: *default
   adapter: postgresql
+  encoding: unicode
   database: toyapp
+  pool: 5
   username: postgres
-  password: pooja013
+  password: pooja013 
+
